@@ -28,21 +28,20 @@ function ServicesPage() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          minHeight: '80vh'
+          minHeight: '100vh'
         }}
       >
         <div className="absolute inset-0 bg-gray-900 bg-opacity-70"></div>
-      </section>
 
-      {/* What We Do Title and Service Cards Section */}
-      <section className="bg-gray-900" style={{ marginTop: '-50vh', paddingTop: '50vh' }}>
-        <div className="max-w-7xl mx-auto px-8">
-          {/* What We Do Title */}
-          <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-white">What We Do</h1>
-          </div>
+        {/* What We Do Title and Service Cards - Absolutely positioned */}
+        <div className="absolute inset-0 flex flex-col justify-end pb-4">
+          <div className="max-w-7xl mx-auto px-8 w-full">
+            {/* What We Do Title */}
+            <div className="text-center mb-8">
+              <div className="text-4xl md:text-5xl font-bold text-white" role="heading" aria-level="1">What We Do</div>
+            </div>
 
-          {/* Service Cards - 2x2 grid */}
+            {/* Service Cards - 2x2 grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Machine Control Modeling Card */}
           <div
@@ -52,13 +51,13 @@ function ServicesPage() {
               backgroundSize: 'cover',
               backgroundPosition: 'left top',
               backgroundRepeat: 'no-repeat',
-              minHeight: '400px'
+              minHeight: '300px'
             }}
             onClick={() => window.location.href='/services/machine-control'}
           >
-            <div className="absolute inset-0 bg-gray-900 bg-opacity-60"></div>
+            <div className="absolute inset-0 bg-gray-900 bg-opacity-30"></div>
             <div className="relative p-8 h-full flex flex-col justify-center">
-              <h3 className="text-2xl font-bold text-white mb-4">3D Machine Control Modeling</h3>
+              <h3 className="text-3xl font-bold text-white mb-4 leading-tight">Machine Control<br />Modeling</h3>
               <div className="text-ab-blue font-semibold">Learn More →</div>
             </div>
           </div>
@@ -66,38 +65,53 @@ function ServicesPage() {
           {/* Takeoffs Card */}
           <div
             className="relative bg-gray-800 rounded-lg shadow-xl border border-gray-700 hover:border-ab-blue transition-colors cursor-pointer overflow-hidden"
-            style={{ minHeight: '400px' }}
+            style={{ minHeight: '300px' }}
             onClick={() => window.location.href='/services/takeoffs'}
           >
             <div className="relative p-8 h-full flex flex-col justify-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Takeoffs & Earthwork Calculations</h3>
+              <h3 className="text-3xl font-bold text-white mb-4 leading-tight">Takeoffs</h3>
               <div className="text-ab-blue font-semibold">Learn More →</div>
             </div>
           </div>
 
           {/* Remote Support Card */}
           <div
-            className="relative bg-gray-800 rounded-lg shadow-xl border border-gray-700 hover:border-ab-blue transition-colors cursor-pointer overflow-hidden"
-            style={{ minHeight: '400px' }}
+            className="relative rounded-lg shadow-xl border border-gray-700 hover:border-ab-blue transition-colors cursor-pointer overflow-hidden"
+            style={{
+              backgroundImage: 'url(/remote-support.png)',
+              backgroundSize: 'contain',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              minHeight: '300px'
+            }}
             onClick={() => window.location.href='/services/remote-support'}
           >
+            <div className="absolute inset-0 bg-gray-900 bg-opacity-60"></div>
             <div className="relative p-8 h-full flex flex-col justify-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Remote Support</h3>
+              <h3 className="text-3xl font-bold text-white mb-4 leading-tight">Remote<br />Support</h3>
               <div className="text-ab-blue font-semibold">Learn More →</div>
             </div>
           </div>
 
           {/* Training Card */}
           <div
-            className="relative bg-gray-800 rounded-lg shadow-xl border border-gray-700 hover:border-ab-blue transition-colors cursor-pointer overflow-hidden"
-            style={{ minHeight: '400px' }}
+            className="relative rounded-lg shadow-xl border border-gray-700 hover:border-ab-blue transition-colors cursor-pointer overflow-hidden"
+            style={{
+              backgroundImage: 'url(/thinkific-training.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'left center',
+              backgroundRepeat: 'no-repeat',
+              minHeight: '300px'
+            }}
             onClick={() => window.location.href='/model-building-course'}
           >
+            <div className="absolute inset-0 bg-gray-900 bg-opacity-60"></div>
             <div className="relative p-8 h-full flex flex-col justify-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Training</h3>
+              <h3 className="text-3xl font-bold text-white mb-4 leading-tight">Training</h3>
               <div className="text-ab-blue font-semibold">Learn More →</div>
             </div>
           </div>
+            </div>
           </div>
         </div>
       </section>
