@@ -1,0 +1,163 @@
+/* Utility Bar Styles */
+.utility-bar {
+  background: #1e293b;
+  color: white;
+  padding: 8px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+}
+
+.utility-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.utility-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.utility-text {
+  font-size: 14px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.utility-button {
+  background: transparent;
+  border: 1px solid #475569;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.utility-button:hover {
+  background: #334155;
+  border-color: #64748b;
+}
+
+.utility-button.request-form {
+  background: transparent;
+  border-color: #666666;
+  color: #b8b8b8;
+}
+
+.utility-button.request-form:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #888888;
+  color: #ffffff;
+}
+
+.utility-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.utility-info {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* Adjust main navigation to account for utility bar */
+.navigation {
+  top: 36px !important;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .utility-container {
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px 20px;
+  }
+
+  .utility-left,
+  .utility-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .utility-text {
+    display: none;
+  }
+
+  .utility-right {
+    display: none;
+  }
+
+  .navigation {
+    top: 44px !important;
+  }
+}
+
+/* Request Form Modal */
+.request-form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.request-form-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.request-form-modal-content {
+  position: relative;
+  background: white;
+  width: 100%;
+  max-width: 800px;
+  height: 90vh;
+  max-height: 900px;
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.close-modal:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}

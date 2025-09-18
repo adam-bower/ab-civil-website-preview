@@ -1,0 +1,171 @@
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './Navigation.css';
+
+const Navigation = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
+  return (
+    <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="nav-container">
+        <Link to="/" className="nav-logo">
+          <span className="logo-text">AB Civil</span>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <div className="nav-menu desktop">
+          <Link 
+            to="/" 
+            className={`nav-link ${isActive('/') ? 'active' : ''}`}
+          >
+            Home
+          </Link>
+          <Link 
+            to="/about" 
+            className={`nav-link ${isActive('/about') ? 'active' : ''}`}
+          >
+            About
+          </Link>
+          <Link 
+            to="/services" 
+            className={`nav-link ${isActive('/services') ? 'active' : ''}`}
+          >
+            Services
+          </Link>
+          <Link 
+            to="/portfolio" 
+            className={`nav-link ${isActive('/portfolio') ? 'active' : ''}`}
+          >
+            Portfolio
+          </Link>
+          <Link 
+            to="/contact" 
+            className={`nav-link ${isActive('/contact') ? 'active' : ''}`}
+          >
+            Contact
+          </Link>
+          
+          {/* Prominent Get Started button for new clients */}
+          <Link 
+            to="/get-started" 
+            className="nav-cta"
+          >
+            Get Started
+          </Link>
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <button 
+          className="mobile-menu-toggle"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
+        >
+          <span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+        <div className="mobile-menu-content">
+          <Link 
+            to="/" 
+            className={`mobile-nav-link ${isActive('/') ? 'active' : ''}`}
+            onClick={closeMobileMenu}
+          >
+            Home
+          </Link>
+          <Link 
+            to="/about" 
+            className={`mobile-nav-link ${isActive('/about') ? 'active' : ''}`}
+            onClick={closeMobileMenu}
+          >
+            About
+          </Link>
+          <Link 
+            to="/services" 
+            className={`mobile-nav-link ${isActive('/services') ? 'active' : ''}`}
+            onClick={closeMobileMenu}
+          >
+            Services
+          </Link>
+          <Link 
+            to="/portfolio" 
+            className={`mobile-nav-link ${isActive('/portfolio') ? 'active' : ''}`}
+            onClick={closeMobileMenu}
+          >
+            Portfolio
+          </Link>
+          <Link 
+            to="/contact" 
+            className={`mobile-nav-link ${isActive('/contact') ? 'active' : ''}`}
+            onClick={closeMobileMenu}
+          >
+            Contact
+          </Link>
+          
+          <div className="mobile-menu-divider"></div>
+          
+          <Link 
+            to="/get-started" 
+            className="mobile-nav-cta"
+            onClick={closeMobileMenu}
+          >
+            Get Started
+          </Link>
+          
+          {/* Quick links for existing clients */}
+          <div className="mobile-quick-links">
+            <p className="quick-links-title">Existing Clients:</p>
+            <button 
+              className="quick-link"
+              onClick={() => {
+                window.open('/request-form#model', '_blank', 'width=800,height=900');
+                closeMobileMenu();
+              }}
+            >
+              Submit Model Request
+            </button>
+            <button 
+              className="quick-link"
+              onClick={() => {
+                window.open('/request-form#takeoff', '_blank', 'width=800,height=900');
+                closeMobileMenu();
+              }}
+            >
+              Submit Takeoff Request
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;

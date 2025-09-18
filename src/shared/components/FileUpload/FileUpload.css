@@ -1,0 +1,718 @@
+/* FileUpload Component Styles */
+
+.file-upload-component {
+  margin-top: 20px;
+}
+
+/* Files inside drop zone styles */
+.file-drop-zone.has-files {
+  padding: 20px;
+  min-height: 300px;
+  overflow: visible; /* Don't scroll the whole drop zone */
+}
+
+.files-in-dropzone {
+  width: 100%;
+}
+
+.dropzone-header {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left; /* Align header to left */
+}
+
+.dropzone-header h4 {
+  margin: 0 0 5px 0;
+  color: #374151;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left; /* Align header text to left */
+}
+
+.dropzone-header .upload-hint {
+  text-align: left; /* Align hint text to left */
+}
+
+.dropzone-files-list {
+  max-height: 200px; /* Can show more files now that they're smaller */
+  overflow-y: auto;
+  padding-right: 5px;
+  margin-bottom: 12px; /* Space before buttons */
+}
+
+.dropzone-files-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropzone-files-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.dropzone-files-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.dropzone-files-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.file-item.compact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px; /* Slightly smaller padding */
+  margin-bottom: 4px; /* Slightly smaller margin */
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px; /* Medium radius */
+  transition: all 0.2s ease;
+  min-height: 32px; /* Slightly smaller height */
+  text-align: left; /* Align text to left */
+}
+
+.file-item.compact:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.file-item.compact .file-info {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Slightly smaller gap */
+  flex: 1;
+  min-width: 0;
+  text-align: left; /* Ensure left alignment */
+}
+
+.file-item.compact .file-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px; /* Slightly smaller font */
+  color: #374151;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.file-item.compact .file-size {
+  font-size: 12px; /* Slightly smaller size text */
+  color: #9ca3af;
+  white-space: nowrap;
+  text-align: left;
+  margin-right: 10px; /* Add space before delete button */
+}
+
+.file-type-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 18px;
+  padding: 0 3px;
+  border-radius: 2px;
+  color: white;
+  font-size: 9px;
+  font-weight: 600;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.file-type-badge.file-type-pdf {
+  background: #dc2626;
+}
+
+.file-type-badge.file-type-image {
+  background: #10b981;
+}
+
+.file-type-badge.file-type-archive {
+  background: #8b5cf6;
+}
+
+.file-type-badge.file-type-cad {
+  background: #0891b2;
+}
+
+.file-type-badge.file-type-excel {
+  background: #059669;
+}
+
+.file-type-badge.file-type-text {
+  background: #6b7280;
+}
+
+.file-type-badge.file-type-bim {
+  background: #ea580c;
+}
+
+.file-type-badge.file-type-default {
+  background: #6b7280;
+}
+
+.file-item.compact .file-status {
+  font-size: 12px; /* Match the file size font */
+  margin-left: 0; /* No extra space - file size already has margin */
+  margin-right: 10px; /* Add space before delete button */
+  flex-shrink: 0;
+}
+
+.file-remove.compact {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 14px; /* Slightly smaller remove button */
+  padding: 4px 8px; /* Slightly smaller padding */
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.file-remove.compact:hover {
+  color: #dc2626;
+  background-color: #fee2e2;
+}
+
+/* Progress Bar Styles */
+.file-upload-status {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.file-status.uploading {
+  color: #3b82f6;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 6px;
+  background-color: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.file-drop-zone {
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.file-drop-zone:hover:not(.disabled) {
+  border-color: #9ca3af;
+  background: #f3f4f6;
+}
+
+.file-drop-zone.drag-active {
+  border-color: #2a5298;
+  background: #eff6ff;
+}
+
+.file-drop-zone.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.upload-errors {
+  margin-top: 15px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.error-item {
+  color: #dc2626;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.error-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Upload progress and status styles */
+.upload-progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #e5e7eb;
+  border-radius: 2px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.upload-progress-fill {
+  height: 100%;
+  background-color: #2a5298;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.file-status {
+  font-size: 12px;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.file-status.uploading {
+  color: #2a5298;
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+.file-status.uploaded {
+  color: #16a34a;
+  margin-right: 10px; /* Add space before delete button */
+}
+
+.file-status.error {
+  color: #dc2626;
+}
+
+.file-status.pending {
+  color: #6b7280;
+}
+
+/* Retry button */
+.retry-button {
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 8px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.retry-button:hover:not(:disabled) {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+.retry-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+/* Update file remove button for different states */
+.file-remove {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.file-remove:hover {
+  color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.file-remove.uploading {
+  color: #dc2626 !important;
+  background-color: #fef2f2;
+  font-weight: bold;
+  animation: pulse-red 1.5s ease-in-out infinite alternate;
+}
+
+.file-remove.uploading:hover {
+  background-color: #fee2e2;
+  transform: scale(1.1);
+}
+
+.file-remove.can-delete {
+  color: #dc2626;
+  background-color: #fef2f2;
+  border: 1px solid #fca5a5;
+  font-weight: 500;
+}
+
+.file-remove.can-delete:hover {
+  background-color: #dc2626;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.2);
+}
+
+.file-remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@keyframes pulse-red {
+  from {
+    opacity: 1;
+    background-color: #fef2f2;
+  }
+  to {
+    opacity: 0.8;
+    background-color: #fee2e2;
+  }
+}
+
+/* Delete Confirmation Dialog */
+.delete-confirmation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.delete-confirmation-dialog {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.delete-confirmation-dialog h3 {
+  margin: 0 0 16px 0;
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.delete-confirmation-dialog p {
+  margin: 0 0 24px 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.delete-confirmation-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn-cancel {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-cancel:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.btn-delete {
+  background: #dc2626;
+  color: white;
+  border: 1px solid #dc2626;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+  background: #b91c1c;
+  border-color: #b91c1c;
+}
+
+.selected-files h4 {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.upload-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #e5e7eb;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #2a5298;
+  transition: width 0.3s ease;
+}
+
+.file-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.file-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.file-link {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 4px;
+  transition: transform 0.2s;
+}
+
+.file-link:hover {
+  transform: scale(1.1);
+}
+
+.file-icon {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.file-status {
+  font-size: 12px;
+  color: #f59e0b;
+  font-style: italic;
+}
+
+/* Folder upload styles */
+.upload-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Buttons inside drop zone when files are present */
+.file-drop-zone.has-files .upload-buttons {
+  margin-top: 0;
+  padding-top: 15px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.btn-folder {
+  background: #2a5298;
+}
+
+.btn-folder:hover {
+  background: #1e3a6f;
+}
+
+.folder-group {
+  margin-bottom: 8px;
+}
+
+.folder-header {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  background: #f3f4f6;
+  border-left: 3px solid #2a5298;
+  margin-bottom: 4px;
+  font-weight: 500;
+  position: relative;
+  gap: 8px;
+  min-height: 32px;
+}
+
+
+.folder-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  color: #f59e0b;
+}
+
+.folder-name {
+  color: #1f2937;
+  font-size: 14px;
+  flex: 1;
+  text-align: left;
+}
+
+.folder-file-count {
+  color: #6b7280;
+  font-size: 12px;
+  margin-left: 8px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.folder-delete-btn {
+  background: none;
+  border: none;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  margin-left: auto;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.folder-delete-btn:hover:not(:disabled) {
+  background: rgba(220, 38, 38, 0.1);
+  transform: scale(1.1);
+}
+
+.folder-delete-btn:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.folder-group .file-item {
+  margin-left: 20px;
+  border-left: 1px dashed #d1d5db;
+}
+
+/* Download Button Styles */
+.download-button-container {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(102, 126, 234, 0.2);
+}
+
+.btn-download:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-download:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-download .spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.download-note {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #666;
+  font-style: italic;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .upload-buttons {
+    flex-direction: column;
+  }
+  
+  .btn-upload,
+  .btn-folder,
+  .btn-download {
+    width: 100%;
+  }
+}

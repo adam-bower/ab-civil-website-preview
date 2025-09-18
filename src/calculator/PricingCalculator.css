@@ -1,0 +1,406 @@
+.calculator-container {
+  width: 100%;
+}
+
+.calculator-card {
+  background: #1f2937;
+  overflow: hidden;
+  border: 2px solid #374151;
+  border-radius: 0.5rem;
+}
+
+.calculator-body {
+  padding: 2rem;
+  background: #1f2937;
+}
+
+.calculator-footer {
+  padding: 1.5rem 2rem;
+  background: #1f2937;
+  border-top: 2px solid #374151;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: normal;
+}
+
+.form-section h4 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: normal;
+}
+
+.radio-group,
+.checkbox-group {
+  background: #374151;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  border: 1px solid #4b5563;
+}
+
+.radio-item,
+.checkbox-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  margin: 0.25rem 0;
+  background: #374151;
+  border: 1px solid #4b5563;
+  border-radius: 0;
+  cursor: pointer;
+  transition: none;
+  color: #ffffff;
+}
+
+.radio-item:hover,
+.checkbox-item:hover {
+  background: #4b5563;
+  border-color: #ffffff;
+}
+
+.radio-item input,
+.checkbox-item input {
+  margin-right: 0.5rem;
+}
+
+.sub-section {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #374151;
+  border: 2px solid #4b5563;
+  border-radius: 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.input-label {
+  background: #374151;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  font-weight: normal;
+  color: #ffffff;
+  border: 1px solid #4b5563;
+  border-right: none;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #4b5563;
+  border-radius: 0;
+  font-size: 1rem;
+  background: #374151;
+  color: #ffffff;
+}
+
+.info-note {
+  margin: 0.5rem 1rem;
+  padding: 0.75rem;
+  background: #374151;
+  border: 1px solid #4b5563;
+  border-radius: 0;
+  font-size: 0.875rem;
+  color: #ffffff;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #4b5563;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  cursor: pointer;
+  transition: none;
+}
+
+.btn-primary {
+  background: #374151;
+  color: #ffffff;
+  width: 100%;
+  border: 2px solid #4b5563;
+}
+
+.btn-primary:hover {
+  background: #4b5563;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-primary:disabled {
+  background: #6b7280;
+  cursor: not-allowed;
+  transform: none;
+  color: #666666;
+}
+
+.btn-secondary {
+  background: #374151;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #4b5563;
+}
+
+.btn-secondary:hover {
+  background: #4b5563;
+}
+
+.alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0;
+  text-align: center;
+  border: 2px solid #4b5563;
+  background: #374151;
+  color: #ffffff;
+}
+
+.alert-info {
+  background: #374151;
+  color: #ffffff;
+  border: 2px solid #4b5563;
+}
+
+.alert-warning {
+  background: #374151;
+  color: #ffffff;
+  border: 2px solid #4b5563;
+}
+
+.alert-danger {
+  background: #374151;
+  color: #ffffff;
+  border: 2px solid #4b5563;
+}
+
+.alert-success {
+  background: #374151;
+  color: #ffffff;
+  border: 2px solid #4b5563;
+}
+
+.alert a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: #374151;
+  border: 2px solid #4b5563;
+  border-radius: 0;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: none;
+  color: #ffffff;
+}
+
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 2px solid #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #374151;
+}
+
+.modal-header h5 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+
+.close-btn {
+  background: none;
+  border: 1px solid #4b5563;
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.close-btn:hover {
+  background: #4b5563;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  background: #374151;
+}
+
+.modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 2px solid #000000;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  background: #374151;
+}
+
+/* Cost Table */
+.cost-table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  background: #374151;
+  color: #ffffff;
+  border: 1px solid #4b5563;
+}
+
+.cost-table td {
+  padding: 0.5rem;
+  background: #374151;
+  border: 1px solid #4b5563;
+}
+
+.cost-table .total-row td {
+  padding-top: 1rem;
+  border-top: 2px solid #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.disclaimer {
+  padding: 1rem;
+  background: #374151;
+  border: 2px solid #4b5563;
+  border-radius: 0;
+  margin: 1rem 0;
+  color: #ffffff;
+}
+
+/* User Form */
+.user-form {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #000000;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #4b5563;
+  border-radius: 0;
+  font-size: 1rem;
+  background: #374151;
+  color: #ffffff;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ffffff;
+  box-shadow: none;
+  border-width: 2px;
+}
+
+.form-check {
+  margin: 1rem 0;
+}
+
+.form-check label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.form-check input {
+  margin-right: 0.5rem;
+}
+
+.address-fields {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #374151;
+  border: 1px solid #4b5563;
+  border-radius: 0;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Success Message */
+.success-message {
+  padding: 2rem;
+  text-align: center;
+  background: #374151;
+}
+
+.success-message h4 {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+}
+
+.success-message .btn {
+  margin-top: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calculator-container {
+    margin: 2rem auto;
+  }
+
+  .calculator-body {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    margin: 1rem;
+  }
+}

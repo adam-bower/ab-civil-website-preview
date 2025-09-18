@@ -1,0 +1,65 @@
+.project-counter {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.project-counter h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.trust-stats .project-counter {
+  margin-bottom: 0.5rem;
+}
+
+.project-count-wrapper {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.project-count-wrapper .project-count {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1a365d;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.project-count-wrapper .project-subtitle {
+  font-size: 0.875rem;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.project-count-wrapper .client-count {
+  font-size: 1.25rem;
+  color: #2d3748;
+  font-weight: 600;
+  display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .project-count-wrapper {
+    padding: 1.25rem 2rem;
+  }
+  
+  .project-count-wrapper .project-count {
+    font-size: 2.5rem;
+  }
+  
+  .project-count-wrapper .client-count {
+    font-size: 1.125rem;
+  }
+}

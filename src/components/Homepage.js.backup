@@ -1,0 +1,19 @@
+import React from 'react';
+import Hero from './Hero';
+import Services from './Services';
+import Trust from './Trust';
+import Footer from './Footer';
+import './Homepage.css';
+
+function Homepage() {
+  return (
+    <div className="homepage">
+      <Hero />
+      <Services />
+      <Trust />
+      <Footer />
+    </div>
+  );
+}
+
+export default Homepage;

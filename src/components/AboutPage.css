@@ -1,0 +1,166 @@
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+  background: #ffffff;
+  color: #000000;
+}
+
+.about-hero {
+  background: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
+  border-bottom: 2px solid #000000;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #000000;
+  font-weight: normal;
+}
+
+.about-hero .lead {
+  font-size: 1.125rem;
+  color: #000000;
+  margin: 0;
+}
+
+.about-content {
+  padding: 3rem 0;
+  background: #ffffff;
+  flex: 1;
+}
+
+.company-section,
+.approach-section,
+.values-section,
+.team-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #000000;
+}
+
+.company-section h2,
+.approach-section h2,
+.values-section h2,
+.team-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #000000;
+  font-weight: normal;
+}
+
+.company-section p,
+.approach-section p,
+.team-intro {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.value-item {
+  padding: 1.5rem;
+  border: 2px solid #000000;
+  background: #ffffff;
+}
+
+.value-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #000000;
+  font-weight: bold;
+}
+
+.value-item p {
+  font-size: 0.95rem;
+  color: #000000;
+  margin: 0;
+}
+
+.founder-section {
+  margin: 2rem 0 3rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #000000;
+}
+
+.team-member {
+  padding: 1.5rem;
+  border: 2px solid #000000;
+  background: #ffffff;
+  text-align: center;
+}
+
+.team-member.founder {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.member-photo {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #000000;
+  margin: 0 auto 1rem;
+  background: #ffffff;
+}
+
+.team-member h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #000000;
+  font-weight: normal;
+}
+
+.member-title {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.member-bio {
+  font-size: 0.9rem;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .member-photo {
+    width: 120px;
+    height: 120px;
+  }
+}

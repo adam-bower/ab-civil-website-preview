@@ -1,0 +1,51 @@
+/* Auto Resize Wrapper Styles */
+.auto-resize-wrapper {
+  width: 100%;
+  height: auto;
+  overflow: visible !important;
+  position: relative;
+  min-height: 100vh; /* Ensure minimum height */
+}
+
+/* Ensure body and html don't create scrollbars */
+body.iframe-embedded {
+  overflow: hidden !important;
+  margin: 0;
+  padding: 0;
+  height: auto !important;
+}
+
+html.iframe-embedded {
+  overflow: hidden !important;
+  height: auto !important;
+}
+
+/* Remove scrollbars from all parent containers when embedded */
+.iframe-embedded .service-request-container,
+.iframe-embedded .client-intake-container {
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* Ensure forms expand properly */
+.iframe-embedded form {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+/* Handle select dropdowns and other absolute positioned elements */
+.iframe-embedded select,
+.iframe-embedded .dropdown {
+  position: relative !important;
+}
+
+/* Ensure file upload areas don't cause overflow */
+.iframe-embedded .file-upload-container {
+  overflow: visible !important;
+}
+
+/* Smooth height transitions */
+.auto-resize-wrapper * {
+  transition: height 0.3s ease, max-height 0.3s ease;
+}

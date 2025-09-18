@@ -1,0 +1,967 @@
+/* Service Request Form Styles */
+
+/* Condensed Form Layout */
+.condensed-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.condensed-form .form-header {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  color: white;
+  padding: 20px 30px;
+  margin: -45px -45px 30px -45px;
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+}
+
+.condensed-form .form-header .form-title {
+  margin: 0;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+.form-section.conditional-section {
+  background: #f9fafb;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  border: 1px solid #e5e7eb;
+}
+
+/* Horizontal Form Layout with Left Labels */
+.form-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 15px;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+.form-row label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  padding-top: 10px;
+  text-align: right;
+  line-height: 1.4;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input-wrapper.full-width {
+  width: 100%;
+}
+
+/* Inline Radio and Checkbox Groups */
+.radio-group-inline,
+.checkbox-group-inline {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 8px;
+}
+
+.radio-item-inline,
+.checkbox-item-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 15px;
+}
+
+.radio-item-inline input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: #3b82f6;
+  cursor: pointer;
+  position: relative;
+  top: 0px;
+}
+
+.checkbox-item-inline input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+.radio-item-inline label {
+  font-weight: 400;
+  color: #4b5563;
+  cursor: pointer;
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-block;
+  position: relative;
+  top: -4px;
+}
+
+.checkbox-item-inline label {
+  font-weight: 400;
+  color: #4b5563;
+  cursor: pointer;
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-block;
+  position: relative;
+  top: -5px;
+}
+
+/* Advanced Utilities Checkbox Alignment */
+.advanced-utilities-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: #3b82f6;
+  cursor: pointer;
+  position: relative;
+  top: 0px;
+}
+
+/* Scope Options Checkbox Text Alignment */
+.checkbox-group-inline[style*="column"] .checkbox-item-inline label {
+  position: relative;
+  top: -4px;
+}
+
+/* Compact Input Styling */
+.condensed-form input[type="text"],
+.condensed-form input[type="email"],
+.condensed-form input[type="tel"],
+.condensed-form input[type="date"],
+.condensed-form input[type="number"],
+.condensed-form textarea,
+.condensed-form select {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  min-height: 38px;
+}
+
+.condensed-form textarea {
+  min-height: 80px;
+}
+
+/* Error Messages in Condensed Layout */
+.condensed-form .error-message {
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: 2px;
+}
+
+/* Section with Centered Headers */
+.form-section-centered {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form-section-centered .section-header {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.form-section-centered .input-wrapper,
+.form-section-centered textarea,
+.form-section-centered .file-upload-box {
+  text-align: left;
+}
+
+/* Horizontal Checkbox Group for Centered Sections */
+.checkbox-group-horizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.checkbox-group-horizontal .checkbox-item-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.checkbox-group-horizontal .checkbox-item-inline input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+.checkbox-group-horizontal .checkbox-item-inline label {
+  font-weight: 400;
+  color: #4b5563;
+  cursor: pointer;
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-block;
+  position: relative;
+  top: 0px;
+}
+
+/* File Upload Styles */
+.file-upload-section {
+  margin-top: 30px;
+}
+
+.file-upload-box {
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.file-upload-box:hover {
+  border-color: #9ca3af;
+  background: #f3f4f6;
+}
+
+.file-upload-box.drag-over {
+  border-color: #2a5298;
+  background: #eff6ff;
+}
+
+.upload-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.upload-text {
+  font-size: 16px;
+  color: #374151;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.upload-hint {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.btn-upload {
+  padding: 10px 24px;
+  background: #1f2937;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-upload:hover {
+  background: #111827;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.selected-files {
+  margin-top: 20px;
+  text-align: left;
+  display: none;
+}
+
+.selected-files.has-files {
+  display: block;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.file-item:hover {
+  background: #f9fafb;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-icon {
+  width: 20px;
+  height: 20px;
+  color: #6b7280;
+}
+
+.file-name {
+  font-size: 14px;
+  color: #374151;
+}
+
+.file-size {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-left: 8px;
+}
+
+.file-remove {
+  padding: 4px 8px;
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.file-remove:hover {
+  background: #fecaca;
+}
+
+.service-request-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  background: transparent;
+}
+
+/* Selection Step Styles */
+.selection-container {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.question-group {
+  margin-bottom: 30px;
+}
+
+.question {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.question .required {
+  color: #ef4444;
+  font-size: 18px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.radio-option:hover {
+  border-color: #3b82f6;
+  background-color: #f3f4f6;
+}
+
+.radio-option input[type="radio"] {
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #3b82f6;
+}
+
+.radio-option label {
+  cursor: pointer;
+  flex: 1;
+  color: #374151;
+  margin-bottom: 0;
+}
+
+.radio-option input[type="radio"]:checked + label {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.radio-option:has(input:checked) {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+/* Service Form Styles */
+.service-form {
+  background: white;
+  border-radius: 12px;
+  padding: 45px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.required {
+  color: #ef4444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  background-color: #f9fafb;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: white;
+}
+
+input[type="date"] {
+  cursor: pointer;
+  position: relative;
+  min-height: 44px;
+}
+
+/* Make the entire date input clickable */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Style the date input on hover */
+input[type="date"]:hover {
+  background-color: #f9f9f9;
+  border-color: #3b82f6;
+}
+
+/* Ensure the date value is visible */
+input[type="date"]::-webkit-datetime-edit {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Radio Items (in forms) */
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.radio-item input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #3b82f6;
+}
+
+.radio-item label {
+  margin-bottom: 0;
+  font-weight: 400;
+  cursor: pointer;
+  color: #374151;
+}
+
+/* Checkbox Styles */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #3b82f6;
+}
+
+.checkbox-item label {
+  margin-bottom: 0;
+  font-weight: 400;
+  cursor: pointer;
+  color: #374151;
+}
+
+/* Button Styles */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #1f2937;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #111827;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary::after {
+  content: '→';
+  font-size: 16px;
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+.btn-secondary::before {
+  content: '←';
+  font-size: 16px;
+}
+
+/* Error Styles */
+.error-message {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.error-highlight {
+  border-color: #ef4444 !important;
+  background-color: #fef2f2 !important;
+}
+
+/* Submit Message Styles */
+.submit-message {
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.submit-message.success {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.submit-message.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+
+/* Responsive Design - Mobile First */
+@media (max-width: 767px) {
+  /* Container adjustments */
+  .service-request-container {
+    padding: 12px;
+  }
+  
+  .selection-container,
+  .service-form {
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  /* Form title adjustments */
+  .form-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  
+  /* Condensed form mobile header */
+  .condensed-form .form-header {
+    padding: 16px 20px;
+    margin: -16px -16px 20px -16px;
+  }
+  
+  .condensed-form .form-header .form-title {
+    font-size: 18px;
+  }
+  
+  /* Stack form rows on mobile */
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .form-row label {
+    text-align: left;
+    padding-top: 0;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  
+  /* Form group spacing */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  
+  /* Input field adjustments */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="number"],
+  textarea,
+  select {
+    padding: 14px;
+    font-size: 16px; /* Prevent iOS zoom */
+    min-height: 48px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    min-height: 100px;
+  }
+  
+  /* Radio and checkbox mobile styles */
+  .radio-group-inline,
+  .checkbox-group-inline {
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 4px;
+  }
+  
+  .radio-item-inline,
+  .checkbox-item-inline {
+    width: 100%;
+    padding: 10px 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-right: 0;
+    gap: 10px;
+  }
+  
+  .radio-item-inline:hover,
+  .checkbox-item-inline:hover {
+    background: #f3f4f6;
+    border-color: #d1d5db;
+  }
+  
+  .radio-item-inline input[type="radio"],
+  .checkbox-item-inline input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .radio-item-inline label {
+    font-size: 15px;
+    line-height: 20px;
+    top: 3px;
+  }
+  
+  .checkbox-item-inline label {
+    font-size: 15px;
+    line-height: 20px;
+    top: 3px;
+  }
+  
+  /* Specific adjustment for takeoff forms checkbox labels */
+  .condensed-form .checkbox-item-inline label {
+    top: 5px;
+  }
+  
+  /* Scope Options Mobile Alignment - Only for takeoff forms */
+  .condensed-form .checkbox-group-inline[style*="column"] .checkbox-item-inline label {
+    top: 3px;
+  }
+  
+  /* File Formats Mobile Alignment - Only for 3D Model forms */
+  .condensed-form .checkbox-item-inline:has(input#trimble) label,
+  .condensed-form .checkbox-item-inline:has(input#topcon) label,
+  .condensed-form .checkbox-item-inline:has(input#leica) label {
+    position: relative;
+    top: 3px;
+  }
+  
+  /* Additional Requests Mobile Alignment - Only for 3D Model forms */
+  .condensed-form .checkbox-item-inline:has(input#erosion) label,
+  .condensed-form .checkbox-item-inline:has(input#pipe) label {
+    position: relative;
+    top: 0px;
+  }
+  
+  /* Linework Only Mobile Alignment - Only for 3D Model forms */
+  .condensed-form .checkbox-item-inline:has(input#linework) label {
+    position: relative;
+    top: 0px;
+  }
+  
+  /* Radio options in selection container */
+  .radio-option {
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+  
+  .radio-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .radio-option label {
+    font-size: 15px;
+  }
+  
+  /* Question group */
+  .question-group {
+    margin-bottom: 24px;
+  }
+  
+  .question {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  
+  /* Button styles */
+  .button-group {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    min-height: 52px;
+    border-radius: 8px;
+  }
+  
+  .btn-upload {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+  
+  /* File upload adjustments */
+  .file-upload-box {
+    padding: 24px 16px;
+  }
+  
+  .upload-text {
+    font-size: 15px;
+  }
+  
+  .upload-hint {
+    font-size: 13px;
+  }
+  
+  /* Form sections */
+  .form-section {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+  }
+  
+  .form-section.conditional-section {
+    padding: 12px;
+    margin: 16px 0;
+  }
+  
+  /* Conditional fields */
+  .checkbox-group-horizontal {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* Error messages */
+  .error-message {
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  
+  .submit-message {
+    font-size: 14px;
+    padding: 14px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 479px) {
+  .selection-container,
+  .service-form {
+    padding: 12px;
+  }
+  
+  .condensed-form .form-header {
+    padding: 14px 16px;
+    margin: -12px -12px 16px -12px;
+  }
+  
+  .condensed-form .form-header .form-title {
+    font-size: 16px;
+  }
+  
+  .form-title {
+    font-size: 18px;
+  }
+  
+  /* Ensure single column for radio/checkbox groups */
+  .radio-group-inline,
+  .checkbox-group-inline {
+    flex-direction: column !important;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .service-form {
+    padding: 32px;
+  }
+  
+  .condensed-form .form-header {
+    padding: 18px 24px;
+    margin: -32px -32px 24px -32px;
+  }
+  
+  .condensed-form .form-header .form-title {
+    font-size: 20px;
+  }
+}
