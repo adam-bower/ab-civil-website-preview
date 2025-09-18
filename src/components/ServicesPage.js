@@ -28,16 +28,16 @@ function ServicesPage() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          minHeight: '100vh'
+          minHeight: '125vh'
         }}
       >
         <div className="absolute inset-0 bg-gray-900 bg-opacity-70"></div>
 
         {/* What We Do Title and Service Cards - Absolutely positioned */}
-        <div className="absolute inset-0 flex flex-col justify-end pb-4">
+        <div className="absolute bottom-0 left-0 right-0 pb-8">
           <div className="max-w-7xl mx-auto px-8 w-full">
             {/* What We Do Title */}
-            <div className="text-center mb-8">
+            <div className="text-center mb-12">
               <div className="text-4xl md:text-5xl font-bold text-white" role="heading" aria-level="1">What We Do</div>
             </div>
 
@@ -47,7 +47,7 @@ function ServicesPage() {
           <div
             className="relative rounded-lg shadow-xl border border-gray-700 hover:border-ab-blue transition-colors cursor-pointer overflow-hidden"
             style={{
-              backgroundImage: 'url(/drone-with-surface.png)',
+              backgroundImage: 'url(/drone-with-surface-3.png)',
               backgroundSize: 'cover',
               backgroundPosition: 'left top',
               backgroundRepeat: 'no-repeat',
@@ -56,9 +56,9 @@ function ServicesPage() {
             onClick={() => window.location.href='/services/machine-control'}
           >
             <div className="absolute inset-0 bg-gray-900 bg-opacity-30"></div>
-            <div className="relative p-8 h-full flex flex-col justify-center">
-              <h3 className="text-3xl font-bold text-white mb-4 leading-tight">Machine Control<br />Modeling</h3>
-              <div className="text-ab-blue font-semibold">Learn More →</div>
+            <div className="relative p-8 h-full flex flex-col justify-start pt-12">
+              <h3 className="text-4xl font-bold text-white mb-4 leading-tight">Machine Control<br />Modeling</h3>
+              <div className="text-white font-semibold text-lg">Learn More →</div>
             </div>
           </div>
 
@@ -68,9 +68,9 @@ function ServicesPage() {
             style={{ minHeight: '300px' }}
             onClick={() => window.location.href='/services/takeoffs'}
           >
-            <div className="relative p-8 h-full flex flex-col justify-center">
-              <h3 className="text-3xl font-bold text-white mb-4 leading-tight">Takeoffs</h3>
-              <div className="text-ab-blue font-semibold">Learn More →</div>
+            <div className="relative p-8 h-full flex flex-col justify-start pt-12">
+              <h3 className="text-4xl font-bold text-white mb-4 leading-tight">Takeoffs</h3>
+              <div className="text-white font-semibold text-lg">Learn More →</div>
             </div>
           </div>
 
@@ -87,9 +87,9 @@ function ServicesPage() {
             onClick={() => window.location.href='/services/remote-support'}
           >
             <div className="absolute inset-0 bg-gray-900 bg-opacity-60"></div>
-            <div className="relative p-8 h-full flex flex-col justify-center">
-              <h3 className="text-3xl font-bold text-white mb-4 leading-tight">Remote<br />Support</h3>
-              <div className="text-ab-blue font-semibold">Learn More →</div>
+            <div className="relative p-8 h-full flex flex-col justify-start pt-12">
+              <h3 className="text-4xl font-bold text-white mb-4 leading-tight">Remote<br />Support</h3>
+              <div className="text-white font-semibold text-lg">Learn More →</div>
             </div>
           </div>
 
@@ -106,9 +106,9 @@ function ServicesPage() {
             onClick={() => window.location.href='/model-building-course'}
           >
             <div className="absolute inset-0 bg-gray-900 bg-opacity-60"></div>
-            <div className="relative p-8 h-full flex flex-col justify-center">
-              <h3 className="text-3xl font-bold text-white mb-4 leading-tight">Training</h3>
-              <div className="text-ab-blue font-semibold">Learn More →</div>
+            <div className="relative p-8 h-full flex flex-col justify-start pt-12">
+              <h3 className="text-4xl font-bold text-white mb-4 leading-tight">Training</h3>
+              <div className="text-white font-semibold text-lg">Learn More →</div>
             </div>
           </div>
             </div>
