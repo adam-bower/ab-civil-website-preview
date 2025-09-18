@@ -73,12 +73,12 @@ function PricingCalculator() {
       return;
     }
     
-    if (projectType === 'Typical Surface Model' && (!projectSize || parseFloat(projectSize) <= 0)) {
+    if (projectType === 'Typical Site Model' && (!projectSize || parseFloat(projectSize) <= 0)) {
       setAlert({ show: true, type: 'warning', message: 'Please enter a valid Project Size (Acres) greater than 0.' });
       return;
     }
     
-    if (projectType === 'Typical Surface Model' && parseFloat(projectSize) > 150) {
+    if (projectType === 'Typical Site Model' && parseFloat(projectSize) > 150) {
       setAlert({ 
         show: true, 
         type: 'warning', 
@@ -91,7 +91,7 @@ function PricingCalculator() {
     let baseCost = 0;
     const size = parseFloat(projectSize) || 0;
     
-    if (projectType === 'Typical Surface Model') {
+    if (projectType === 'Typical Site Model') {
       if (size <= 0.5) {
         baseCost = 1200;
       } else if (size > 0.5 && size <= 1) {
@@ -266,13 +266,19 @@ function PricingCalculator() {
                 <input
                   type="radio"
                   name="projectType"
-                  value="Typical Surface Model"
-                  checked={projectType === 'Typical Surface Model'}
-                  onChange={(e) => setProjectType(e.target.value)}
+                  value="Typical Site Model"
+                  checked={projectType === 'Typical Site Model'}
+                  onChange={(e) => {
+                    if (projectType === 'Typical Site Model') {
+                      setProjectType('');
+                    } else {
+                      setProjectType(e.target.value);
+                    }
+                  }}
                 />
-                <span>Typical Surface Model</span>
+                <span>Typical Site Model</span>
               </label>
-              {projectType === 'Typical Surface Model' && (
+              {projectType === 'Typical Site Model' && (
                 <div className="sub-section">
                   <p>Enter the size of the finished modeled surface in acres. 
                      This represents the proposed grading design of the site.</p>
@@ -296,7 +302,13 @@ function PricingCalculator() {
                   name="projectType"
                   value="Linework"
                   checked={projectType === 'Linework'}
-                  onChange={(e) => setProjectType(e.target.value)}
+                  onChange={(e) => {
+                    if (projectType === 'Linework') {
+                      setProjectType('');
+                    } else {
+                      setProjectType(e.target.value);
+                    }
+                  }}
                 />
                 <span>Linework Only</span>
               </label>
@@ -307,7 +319,13 @@ function PricingCalculator() {
                   name="projectType"
                   value="Utilities Only"
                   checked={projectType === 'Utilities Only'}
-                  onChange={(e) => setProjectType(e.target.value)}
+                  onChange={(e) => {
+                    if (projectType === 'Utilities Only') {
+                      setProjectType('');
+                    } else {
+                      setProjectType(e.target.value);
+                    }
+                  }}
                 />
                 <span>Utilities Only</span>
               </label>
@@ -318,7 +336,13 @@ function PricingCalculator() {
                   name="projectType"
                   value="Roadway"
                   checked={projectType === 'Roadway'}
-                  onChange={(e) => setProjectType(e.target.value)}
+                  onChange={(e) => {
+                    if (projectType === 'Roadway') {
+                      setProjectType('');
+                    } else {
+                      setProjectType(e.target.value);
+                    }
+                  }}
                 />
                 <span>Roadway</span>
               </label>
@@ -329,16 +353,22 @@ function PricingCalculator() {
                   name="projectType"
                   value="Other"
                   checked={projectType === 'Other'}
-                  onChange={(e) => setProjectType(e.target.value)}
+                  onChange={(e) => {
+                    if (projectType === 'Other') {
+                      setProjectType('');
+                    } else {
+                      setProjectType(e.target.value);
+                    }
+                  }}
                 />
                 <span>Other</span>
               </label>
             </div>
           </div>
 
-          {/* Optional Requests Section */}
+          {/* Add-on Services Section */}
           <div className="form-section">
-            <h4>Optional Requests</h4>
+            <h4>Add-on Services</h4>
             <div className="checkbox-group">
               <label className="checkbox-item">
                 <input
@@ -346,7 +376,7 @@ function PricingCalculator() {
                   checked={hasErosion}
                   onChange={(e) => setHasErosion(e.target.checked)}
                 />
-                <span>Erosion Surface</span>
+                <span>Erosion Surface - +$450</span>
               </label>
               {hasErosion && (
                 <div className="info-note">
@@ -360,20 +390,21 @@ function PricingCalculator() {
                   checked={hasUtil}
                   onChange={(e) => setHasUtil(e.target.checked)}
                 />
-                <span>Elevated Utilities</span>
+                <span>Elevated Utilities (10% of base)</span>
               </label>
               {hasUtil && (
                 <div className="sub-section">
                   <div className="info-note">
                     All gravity pipe linework will be elevated by invert elevation.
                   </div>
-                  <label className="checkbox-item">
+                  <label className={`checkbox-item ${!hasUtil ? 'disabled' : ''}`}>
                     <input
                       type="checkbox"
                       checked={hasAdvUtil}
+                      disabled={!hasUtil}
                       onChange={(e) => setHasAdvUtil(e.target.checked)}
                     />
-                    <span>Advanced Utility Model</span>
+                    <span>Advanced Utility Model - $30/structure</span>
                   </label>
                   {hasAdvUtil && (
                     <div className="sub-section">
@@ -432,7 +463,7 @@ function PricingCalculator() {
                   )}
                   {costs.erosion > 0 && (
                     <tr>
-                      <td><b>Erosion Surface:</b></td>
+                      <td><b>Erosion Surface (Add-on):</b></td>
                       <td>{formatCurrency(costs.erosion)}</td>
                     </tr>
                   )}
@@ -450,8 +481,8 @@ function PricingCalculator() {
               </table>
               
               <p className="disclaimer">
-                <small><i>Final pricing will be based on the actual modeled surface area of the project. 
-                Please ensure the correct project type is selected. Projects classified as 'Typical Surface Model' 
+                <small><i>Final pricing will be based on the actual modeled surface area of the project.
+                Please ensure the correct project type is selected. Projects classified as 'Typical Site Model'
                 that do not align with standard criteria may be subject to reclassification and adjusted pricing.</i></small>
               </p>
               

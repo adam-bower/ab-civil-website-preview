@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ServiceRequestForm.css';
 import { supabase } from '../../../lib/supabase';
 import FileUploadWithFolders from '../../FileUpload/FileUploadWithFolders';
 import SupabaseStorageService from '../../../services/supabaseStorageService';
 import ConfirmationPage from '../../ConfirmationPage/ConfirmationPage';
 import AutoResizeWrapper from '../../AutoResizeWrapper/AutoResizeWrapper';
-import { 
-  sanitizeInput, 
-  isValidEmail, 
-  isValidPhone, 
+import {
+  sanitizeInput,
+  isValidEmail,
+  isValidPhone,
   generateSecureId,
   validateFormData,
   formSubmissionLimiter,
-  maskSensitiveData 
+  maskSensitiveData
 } from '../../../utils/security';
 
 const ServiceRequestForm = () => {
@@ -59,6 +59,22 @@ const ServiceRequestForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
   const [submissionResult, setSubmissionResult] = useState(null);
+
+  // Check URL parameters on component mount
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const service = urlParams.get('service');
+    const type = urlParams.get('type');
+
+    // If we have the specific takeoff quote parameters, skip to the form
+    if (service === 'takeoff' && type === 'quote') {
+      setServiceSelection({
+        serviceType: 'Takeoff',
+        proceedWork: 'Quote Only'
+      });
+      setCurrentStep('form');
+    }
+  }, []);
 
   // Function to scroll to first error
   const scrollToFirstError = (errorFields) => {

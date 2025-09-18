@@ -30,15 +30,17 @@ function SemanticHomepage() {
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
         {/* Content */}
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="max-w-4xl mx-auto text-center px-4">
+        <div className="relative z-10 h-full flex items-center justify-end">
+          <div className="max-w-4xl mr-24 md:mr-40 text-right px-4 -mt-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">
-              Models That Work. Takeoffs That Count. Support That Matters.
+              <span className="block mb-3">Models You Trust.</span>
+              <span className="block mb-3">Takeoffs That Count.</span>
+              <span className="block">Support That Matters.</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-100 drop-shadow-lg">
-              Complete machine control services for contractors who refuse to compromise.
+            <p className="text-xl md:text-2xl mb-8 text-gray-300 font-light drop-shadow-lg">
+              Complete machine control services for excavation contractors nationwide.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-end">
               <button
                 onClick={() => window.location.href='/service-request'}
                 className="bg-ab-blue text-white px-8 py-4 rounded-lg font-semibold hover:bg-ab-blue-dark transition-colors shadow-lg text-lg"

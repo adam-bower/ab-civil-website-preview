@@ -19,11 +19,9 @@ function AboutPage() {
   }, [location]);
   return (
     <div className="min-h-screen bg-gray-900">
-      <div className="mt-8">
-        <Navigation />
-      </div>
+      <Navigation />
 
-      <section className="bg-gradient-to-b from-gray-800 to-gray-900 text-white py-16">
+      <section className="bg-gradient-to-b from-gray-800 to-gray-900 text-white py-8">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">About AB Civil</h1>
           <p className="text-xl text-gray-300">Turning Plans into Precision</p>

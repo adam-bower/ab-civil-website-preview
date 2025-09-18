@@ -9,9 +9,7 @@ function TermsOfService() {
 
   return (
     <div className="min-h-screen bg-gray-900">
-      <div className="mt-8">
-        <Navigation />
-      </div>
+      <Navigation />
 
       <section className="bg-gradient-to-b from-gray-800 to-gray-900 text-white py-12">
         <div className="max-w-4xl mx-auto text-center px-4">

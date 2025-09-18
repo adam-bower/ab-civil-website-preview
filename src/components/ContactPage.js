@@ -27,9 +27,7 @@ function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gray-900">
-      <div className="mt-8">
-        <Navigation />
-      </div>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-gray-800 to-gray-900 text-white py-12">

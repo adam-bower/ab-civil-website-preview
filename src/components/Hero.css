@@ -22,6 +22,34 @@
   font-size: 3rem;
   margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+}
+
+.hero-title-static {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.hero-title-dynamic {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  min-height: 1.3em;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hero-title-dynamic.fade-in {
+  opacity: 1;
+}
+
+.hero-title-dynamic.fade-out {
+  opacity: 0;
 }
 
 .hero-subtitle {
@@ -68,6 +96,14 @@
   .hero-title {
     font-size: 2rem;
     margin-bottom: 0.75rem;
+  }
+
+  .hero-title-static {
+    font-size: 1.75rem;
+  }
+
+  .hero-title-dynamic {
+    font-size: 2.25rem;
   }
   
   .hero-subtitle {
