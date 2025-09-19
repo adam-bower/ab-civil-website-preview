@@ -19,10 +19,10 @@ function RemoteSupportPage() {
         }}
       >
         {/* Overlay for transparency */}
-        <div className="absolute inset-0 bg-gray-900 opacity-30"></div>
+        <div className="absolute inset-0 bg-gray-900" style={{opacity: 0.175}}></div>
 
         {/* Very subtle right edge fade */}
-        <div className="absolute inset-0 bg-gradient-to-l from-gray-900/30 via-transparent via-10% to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-l from-gray-900/20 via-transparent via-8% to-transparent"></div>
 
         {/* Content Container */}
         <div className="relative z-10 w-full">
