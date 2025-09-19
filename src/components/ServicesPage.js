@@ -31,7 +31,7 @@ function ServicesPage() {
           minHeight: '125vh'
         }}
       >
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-15"></div>
+        <div className="absolute inset-0 bg-gray-900" style={{ opacity: 0.225 }}></div>
 
         {/* What We Do Title and Service Cards - Absolutely positioned */}
         <div className="absolute bottom-0 left-0 right-0 pb-8">
