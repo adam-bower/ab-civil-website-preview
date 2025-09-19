@@ -49,13 +49,13 @@ function Navigation() {
                 </svg>
               </Link>
               <div className="absolute top-full left-0 mt-2 w-56 bg-gray-800 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-700">
-                <Link to="/services#machine-control" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
+                <Link to="/services/machine-control" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
                   Machine Control Modeling
                 </Link>
-                <Link to="/services#takeoffs" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
-                  Quantity Takeoffs
+                <Link to="/services/takeoffs" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
+                  Takeoffs
                 </Link>
-                <Link to="/services#remote-support" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
+                <Link to="/services/remote-support" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
                   Remote Support
                 </Link>
               </div>
@@ -146,13 +146,13 @@ function Navigation() {
             <div className="px-4 py-4 space-y-1">
               <div className="border-b border-gray-700 pb-2 mb-2">
                 <p className="text-gray-400 text-xs uppercase tracking-wider px-4 py-2">Services</p>
-                <Link to="/services#machine-control" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition-colors">
+                <Link to="/services/machine-control" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition-colors">
                   Machine Control Modeling
                 </Link>
-                <Link to="/services#takeoffs" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition-colors">
-                  Quantity Takeoffs
+                <Link to="/services/takeoffs" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition-colors">
+                  Takeoffs
                 </Link>
-                <Link to="/services#remote-support" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition-colors">
+                <Link to="/services/remote-support" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition-colors">
                   Remote Support
                 </Link>
               </div>
