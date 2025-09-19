@@ -24,14 +24,14 @@ function ServicesPage() {
       <section
         className="relative bg-gradient-to-b from-gray-800 to-gray-900 text-white"
         style={{
-          backgroundImage: 'url(/services-hero-3.jpg)',
+          backgroundImage: 'url(/services-hero-5.jpg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center bottom',
+          backgroundPosition: 'center 50px',
           backgroundRepeat: 'no-repeat',
           minHeight: '125vh'
         }}
       >
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-20"></div>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-35"></div>
 
         {/* What We Do Title and Service Cards - Absolutely positioned */}
         <div className="absolute bottom-0 left-0 right-0 pb-8">
