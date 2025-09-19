@@ -24,14 +24,14 @@ function ServicesPage() {
       <section
         className="relative bg-gradient-to-b from-gray-800 to-gray-900 text-white"
         style={{
-          backgroundImage: 'url(/services-image.png)',
+          backgroundImage: 'url(/services-hero-3.jpg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center bottom',
           backgroundRepeat: 'no-repeat',
           minHeight: '125vh'
         }}
       >
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-70"></div>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-20"></div>
 
         {/* What We Do Title and Service Cards - Absolutely positioned */}
         <div className="absolute bottom-0 left-0 right-0 pb-8">
@@ -45,9 +45,9 @@ function ServicesPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Machine Control Modeling Card */}
           <div
-            className="relative rounded-lg shadow-xl border border-gray-700 hover:border-ab-blue transition-colors cursor-pointer overflow-hidden"
+            className="relative rounded-lg shadow-xl border-4 border-gray-700 hover:border-ab-blue transition-colors cursor-pointer overflow-hidden"
             style={{
-              backgroundImage: 'url(/drone-with-surface-3.png)',
+              backgroundImage: 'url(/services-image.png)',
               backgroundSize: 'cover',
               backgroundPosition: 'left top',
               backgroundRepeat: 'no-repeat',
@@ -64,19 +64,26 @@ function ServicesPage() {
 
           {/* Takeoffs Card */}
           <div
-            className="relative bg-gray-800 rounded-lg shadow-xl border border-gray-700 hover:border-ab-blue transition-colors cursor-pointer overflow-hidden"
-            style={{ minHeight: '300px' }}
+            className="relative rounded-lg shadow-xl border-4 border-gray-700 hover:border-ab-blue transition-colors cursor-pointer overflow-hidden"
+            style={{
+              backgroundImage: 'url(/takeoff-image-2.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              minHeight: '300px'
+            }}
             onClick={() => window.location.href='/services/takeoffs'}
           >
+            <div className="absolute inset-0 bg-gray-900 bg-opacity-30"></div>
             <div className="relative p-8 h-full flex flex-col justify-start pt-12">
-              <h3 className="text-4xl font-bold text-white mb-4 leading-tight">Takeoffs</h3>
+              <h3 className="text-4xl font-bold text-white mb-4 leading-tight">Takeoffs<br />&nbsp;</h3>
               <div className="text-white font-semibold text-lg">Learn More →</div>
             </div>
           </div>
 
           {/* Remote Support Card */}
           <div
-            className="relative rounded-lg shadow-xl border border-gray-700 hover:border-ab-blue transition-colors cursor-pointer overflow-hidden"
+            className="relative rounded-lg shadow-xl border-4 border-gray-700 hover:border-ab-blue transition-colors cursor-pointer overflow-hidden"
             style={{
               backgroundImage: 'url(/remote-support.png)',
               backgroundSize: 'contain',
@@ -95,7 +102,7 @@ function ServicesPage() {
 
           {/* Training Card */}
           <div
-            className="relative rounded-lg shadow-xl border border-gray-700 hover:border-ab-blue transition-colors cursor-pointer overflow-hidden"
+            className="relative rounded-lg shadow-xl border-4 border-gray-700 hover:border-ab-blue transition-colors cursor-pointer overflow-hidden"
             style={{
               backgroundImage: 'url(/thinkific-training.png)',
               backgroundSize: 'cover',
@@ -107,7 +114,7 @@ function ServicesPage() {
           >
             <div className="absolute inset-0 bg-gray-900 bg-opacity-60"></div>
             <div className="relative p-8 h-full flex flex-col justify-start pt-12">
-              <h3 className="text-4xl font-bold text-white mb-4 leading-tight">Training</h3>
+              <h3 className="text-4xl font-bold text-white mb-4 leading-tight">Training<br />&nbsp;</h3>
               <div className="text-white font-semibold text-lg">Learn More →</div>
             </div>
           </div>
