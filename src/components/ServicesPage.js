@@ -42,82 +42,86 @@ function ServicesPage() {
             </div>
 
             {/* Service Cards - 2x2 grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Machine Control Modeling Card */}
           <div
-            className="relative rounded-lg shadow-xl border border-gray-200 cursor-pointer overflow-hidden"
+            className="relative rounded-lg shadow-xl border-2 border-gray-900 cursor-pointer overflow-hidden"
             style={{
-              backgroundImage: 'url(/modeling-image-2.png)',
-              backgroundSize: '110%',
-              backgroundPosition: 'right top',
+              backgroundImage: 'url(/services-image.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'left center',
               backgroundRepeat: 'no-repeat',
               backgroundColor: '#374151',
-              minHeight: '300px'
+              minHeight: '300px',
+              opacity: 0.9
             }}
             onClick={() => window.location.href='/services/machine-control'}
           >
             <div className="absolute inset-0 bg-gray-900 bg-opacity-30"></div>
             <div className="relative p-8 h-full flex flex-col justify-between pt-12">
               <h3 className="text-4xl font-bold text-white leading-tight">Machine Control<br />Modeling</h3>
-              <div className="text-white font-semibold text-lg mt-4">Learn More →</div>
+              <div className="text-orange-500 font-semibold text-xl mt-4">Learn More →</div>
             </div>
           </div>
 
           {/* Takeoffs Card */}
           <div
-            className="relative rounded-lg shadow-xl border border-gray-200 cursor-pointer overflow-hidden"
+            className="relative rounded-lg shadow-xl border-2 border-gray-900 cursor-pointer overflow-hidden"
             style={{
               backgroundImage: 'url(/takeoff-image-2.png)',
               backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundPosition: 'left center',
               backgroundRepeat: 'no-repeat',
               backgroundColor: '#374151',
-              minHeight: '300px'
+              minHeight: '300px',
+              opacity: 0.9
             }}
             onClick={() => window.location.href='/services/takeoffs'}
           >
             <div className="absolute inset-0 bg-gray-900 bg-opacity-30"></div>
             <div className="relative p-8 h-full flex flex-col justify-between pt-12">
               <h3 className="text-4xl font-bold text-white leading-tight">Takeoffs<br />&nbsp;</h3>
-              <div className="text-white font-semibold text-lg mt-4">Learn More →</div>
+              <div className="text-orange-500 font-semibold text-xl mt-4">Learn More →</div>
             </div>
           </div>
 
           {/* Remote Support Card */}
           <div
-            className="relative rounded-lg shadow-xl border border-gray-200 cursor-pointer overflow-hidden"
+            className="relative rounded-lg shadow-xl border-2 border-gray-900 cursor-pointer overflow-hidden"
             style={{
-              backgroundImage: 'url(/remote-support.png)',
+              backgroundImage: 'url(/remote-support-4.png)',
               backgroundSize: 'contain',
-              backgroundPosition: 'center',
+              backgroundPosition: 'left center',
               backgroundRepeat: 'no-repeat',
-              minHeight: '300px'
+              minHeight: '300px',
+              opacity: 0.9
             }}
             onClick={() => window.location.href='/services/remote-support'}
           >
             <div className="absolute inset-0 bg-gray-900 bg-opacity-60"></div>
             <div className="relative p-8 h-full flex flex-col justify-between pt-12">
               <h3 className="text-4xl font-bold text-white leading-tight">Remote<br />Support</h3>
-              <div className="text-white font-semibold text-lg mt-4">Learn More →</div>
+              <div className="text-orange-500 font-semibold text-xl mt-4">Learn More →</div>
             </div>
           </div>
 
           {/* Training Card */}
           <div
-            className="relative rounded-lg shadow-xl border border-gray-200 cursor-pointer overflow-hidden"
+            className="relative rounded-lg shadow-xl border-2 border-gray-900 cursor-pointer overflow-hidden"
             style={{
-              backgroundImage: 'url(/thinkific-training.png)',
+              backgroundImage: 'url(/training-blurred.png)',
               backgroundSize: 'cover',
               backgroundPosition: 'left center',
               backgroundRepeat: 'no-repeat',
-              minHeight: '300px'
+              minHeight: '300px',
+              opacity: 0.9
             }}
             onClick={() => window.location.href='/model-building-course'}
           >
-            <div className="absolute inset-0 bg-gray-900 bg-opacity-60"></div>
+            <div className="absolute inset-0 bg-gray-900 bg-opacity-40"></div>
             <div className="relative p-8 h-full flex flex-col justify-between pt-12">
               <h3 className="text-4xl font-bold text-white leading-tight">Training<br />&nbsp;</h3>
-              <div className="text-white font-semibold text-lg mt-4">Learn More →</div>
+              <div className="text-orange-500 font-semibold text-xl mt-4">Learn More →</div>
             </div>
           </div>
             </div>
