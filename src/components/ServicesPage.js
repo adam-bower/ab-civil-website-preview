@@ -24,9 +24,9 @@ function ServicesPage() {
       <section
         className="relative bg-gradient-to-b from-gray-800 to-gray-900 text-white"
         style={{
-          backgroundImage: 'url(/services-hero-5.jpg)',
+          backgroundImage: 'url(/services-hero-6.jpg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center 50px',
+          backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           minHeight: '125vh'
         }}
